@@ -20,10 +20,10 @@ CREATE TABLE Nodes (
 -- TODO add Mac Lookup 
 -- TODO add CMTS Commands 
 
--- ### Timesheet Entry ### 
+-- ### Time Sheet Entry ### 
 
 CREATE TABLE Employees (
-    EmployeeID varchar(255), -- PK? -- probably does not need to be 255
+    EmployeeID varchar(255), 
     FirstName varchar(255),
     LastName varchar(255),
     Department varchar(255), -- CSC, &c.
@@ -80,7 +80,7 @@ CREATE TABLE VideoServices (
 -- Static Customers 
 CREATE TABLE StaticCustomers (
     Customers.StatementNumber, 
-    Description varchar(255), 
+    StaticDescription varchar(255), 
     Router varchar(255), 
     Interface varchar(255), 
     Stag varchar(8), 
