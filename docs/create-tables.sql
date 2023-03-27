@@ -46,16 +46,16 @@ CREATE TABLE TimeSheets (
     WorkCode varchar(255), -- eg 06
     WorkGroup varchar(255), -- eg LTC--Testing Expanse 
     HoursWork float, 
-    PRIMARY KEY (DayWorked)
+    PRIMARY KEY (DayWorked),
     FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID) 
-)
+);
 
 -- ### Support ### 
 
 -- DMCA 
 CREATE TABLE DMCAs (
     DMCA_ID varchar(255), -- PK
-    InternetServiceAccountNumber int, -- TODO varchar?
+    InternetServiceAccountNumber varchar (255), -- TODO varchar?
     VideoServiceAccountNumber varchar (255), 
 
     FlaggedMediaName varchar(255), 
