@@ -1,0 +1,2 @@
+To get authentication working, that is, being able to sign in with the deafult user name, I had to run `php artisan db:seed` in the project root directory 
+

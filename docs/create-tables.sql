@@ -12,16 +12,20 @@
 -- Node Management 
 CREATE TABLE Nodes (
    NodeName varchar(255), -- PK 
-
    Region varchar(255), 
    CMTS varchar(255), -- eg Plaquemine CBR8
-   NumberOfModems int, 
-   ModemState enum("Normal", "Warning", "Critical", "Offline"), 
    SNR float,
-   ModemMAC varchar(255), -- ???
-   PRIMARY KEY (NodeName)
-   -- TODO seperate out modem table 
+   PRIMARY KEY (NodeName) 
 );
+   --NumberOfModems int, -- COUNT(SELECT * FROM Modems WHERE Node == _)   
+
+CREATE TABLE Modems(
+    ModemMAC varchar (255), 
+    Brand varchar(255), -- Arris, &c
+    ModemState enum("Normal", "Warning", "Critical", "Offline"),
+    Node varchar(255),  
+    PRIMARY KEY (ModemMAC) 
+); 
 
 -- TODO add Mac Lookup 
 -- TODO add CMTS Commands 
